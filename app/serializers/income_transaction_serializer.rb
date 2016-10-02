@@ -7,7 +7,7 @@ class IncomeTransactionSerializer < ActiveModel::Serializer
   end
 
   def amt
-    object.amount
+    MoneyHelper.format_as_money(object.amount)
   end
 
   def desc
