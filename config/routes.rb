@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'dashboard#index'
 
   get '/expenses' => 'expense_transactions#index'
-  # get '/expenses/:id' => 'expense_transactions#show'
+  get '/expenses/range' => 'expense_transactions#show'
   get '/income' => 'income_transactions#index'
   get '/expense_categories' => 'expense_categories#index'
   get '/income_categories' => 'income_categories#index'

@@ -12,19 +12,19 @@ end
 p "Created #{ExpenseCategory.count} expense categories."
 
 @expense_transactions = [
-  [DateTime.new(2016, 6, 22), 32.05, @expense_categories.sample, 'Paid for friend'],
-  [DateTime.new(2016, 6, 22), 12.00, @expense_categories.sample],
-  [DateTime.new(2016, 6, 22), 20.0, @expense_categories.sample],
-  [DateTime.new(2016, 6, 23), 24.00, @expense_categories.sample],
-  [DateTime.new(2016, 6, 24), 12.00, @expense_categories.sample],
-  [DateTime.new(2016, 6, 25), 25.0, @expense_categories.sample],
-  [DateTime.new(2016, 6, 26), 47.0, @expense_categories.sample, 'Good times'],
-  [DateTime.new(2016, 6, 26), 40.9, @expense_categories.sample],
-  [DateTime.new(2016, 6, 26), 50.0, @expense_categories.sample],
-  [DateTime.new(2016, 6, 27), 55.0, @expense_categories.sample],
-  [DateTime.new(2016, 6, 27), 10.52, @expense_categories.sample],
-  [DateTime.new(2016, 6, 28), 90.5, @expense_categories.sample],
-  [DateTime.new(2016, 6, 28), 39.9, @expense_categories.sample],
+  [Date.current - 10.days, 32.05, @expense_categories.sample, 'Paid for friend'],
+  [Date.current - 9.days, 12.00, @expense_categories.sample],
+  [Date.current - 8.days, 20.0, @expense_categories.sample],
+  [Date.current - 7.days, 24.00, @expense_categories.sample],
+  [Date.current - 6.days, 12.00, @expense_categories.sample],
+  [Date.current - 3.days, 25.0, @expense_categories.sample],
+  [Date.current - 5.days, 47.0, @expense_categories.sample, 'Good times'],
+  [Date.current - 2.days, 40.9, @expense_categories.sample],
+  [Date.current - 1.days, 50.0, @expense_categories.sample],
+  [Date.current - 21.days, 55.0, @expense_categories.sample],
+  [Date.current - 15.days, 10.52, @expense_categories.sample],
+  [Date.current - 12.days, 90.5, @expense_categories.sample],
+  [Date.current - 9.days, 39.9, @expense_categories.sample],
 ].map do |date, amount, category, desc|
   ExpenseTransaction.create(date: date, amount: amount, expense_category_id: category.id, description: desc)
 end
@@ -46,9 +46,9 @@ p "Created #{IncomeCategory.count} income categories."
 # Income Transactions
 
 @income_transactions = [
-  [DateTime.new(2016, 6, 12), 1000.00, @income_categories.sample],
-  [DateTime.new(2016, 6, 18), 4000.00, @income_categories.sample, 'Double time'],
-  [DateTime.new(2016, 6, 25), 500.00, @income_categories.sample],
+  [Date.current - 30.days, 1000.00, @income_categories.sample],
+  [Date.current - 17.days, 4000.00, @income_categories.sample, 'Double time'],
+  [Date.current - 2.days, 500.00, @income_categories.sample],
 ].map do |date, amount, category, desc|
   IncomeTransaction.create(date: date, amount: amount, income_category_id: category.id, description: desc)
 end

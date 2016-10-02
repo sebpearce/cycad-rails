@@ -13,6 +13,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 
+gem "sprockets", '3.6.3'
 # Use jquery as the JavaScript library
 # gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -31,6 +32,7 @@ gem 'react-rails'
 gem 'active_model_serializers', '~> 0.10.0'
 
 group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
   gem 'pry'
 end
 
